@@ -1,0 +1,23 @@
+<apex:page >
+    <apex:form id="form1">
+        <apex:outputLink value="https://www.salesforce.com" id="theLink">1st output link with Id</apex:outputLink>
+        <br/>
+        <apex:outputLabel value="Select1"/>
+        <apex:selectList multiselect="false" size="1" label="select1">
+            <apex:selectOption itemLabel="Test1" itemValue="Test1"></apex:selectOption>
+            <apex:selectOption itemLabel="Test2" itemValue="Test2"></apex:selectOption>
+            <apex:selectOption itemLabel="Test3" itemValue="Test3"></apex:selectOption>
+        </apex:selectList>
+        <br/>
+    </apex:form>
+    <apex:form id="form2">
+         <apex:outputLink value="https://www.salesforce.com">2nd output link without id</apex:outputLink>
+        <br/>
+        <apex:outputLabel value="Select2"/>
+        <apex:selectList multiselect="false" size="1" label="select2">
+            <apex:selectOption itemLabel="Test4" itemValue="Test4"></apex:selectOption>
+            <apex:selectOption itemLabel="Test5" itemValue="Test5"></apex:selectOption>
+            <apex:selectOption itemLabel="Test6" itemValue="Test6"></apex:selectOption>
+        </apex:selectList>
+    </apex:form>
+</apex:page>

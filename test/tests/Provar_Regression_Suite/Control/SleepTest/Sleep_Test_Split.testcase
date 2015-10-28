@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="151">
+  <summary>This test takes five second pause for each iteration</summary>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" name="Split" testItemId="3" title="Split: templates/test document.txt=&gt;,=&gt;Tokens">
+      <arguments>
+        <argument id="input">
+          <value class="template">templates/test document.txt</value>
+        </argument>
+        <argument id="separator">
+          <value class="value" valueClass="string">,</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Tokens</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="1" title="For Each: {Tokens}=&gt;var">
+      <arguments>
+        <argument id="list">
+          <value class="variable">
+            <path element="Tokens"/>
+          </value>
+        </argument>
+        <argument id="fromItem">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="valueName">
+          <value class="value" valueClass="string">var</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="2">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="4" title="Sleep: {5}">
+              <arguments>
+                <argument id="sleepSecs">
+                  <value class="value" valueClass="decimal">5</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
+</testCase>

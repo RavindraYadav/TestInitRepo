@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="UAT_EmbeddedVFController" sidebar="False" showHeader="False">
+<apex:form >
+<apex:commandButton value="Search" action="{!search}"/> 
+<apex:pageBlock >
+<apex:pageblockTable value="{!acc}" var="a" >  
+     <apex:column >  
+      
+      <apex:outputField value="{!a.name}"/> 
+     </apex:column>  
+           
+    </apex:pageBlockTable> 
+    </apex:pageBlock>
+   </apex:form> 
+</apex:page>

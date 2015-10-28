@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase>
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbConnect" name="DbConnect" testItemId="1" title="DB Connect: DbConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">GGN_ORCL1</value>
+        </argument>
+        <argument id="autoCommit">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="ifAlreadyOpen">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="commitBehaviour">
+          <value class="value" valueClass="string">CommitIfSuccessful</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbRead" name="DbRead" testItemId="2" title="DB Read: DbConnection.ACCOUNT=&gt;DbResults">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DbResults</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+      <expectedExceptions/>
+      <resultAssertions/>
+      <parameterValueSources>
+        <parameterValueSource url="db:sqlquery?connection=SFDC_TEST&amp;query=select+*+from+ACCOUNT&amp;rowLimit=100" variableName="ExcelData" variableScope="Test">
+          <cachedParameters>
+            <apiParam name="aCCOUNT_NAME"/>
+            <apiParam name="pHONE"/>
+            <apiParam name="bILLING_CITY"/>
+          </cachedParameters>
+        </parameterValueSource>
+      </parameterValueSources>
+    </apiCall>
+  </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
+</testCase>

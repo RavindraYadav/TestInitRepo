@@ -1,0 +1,35 @@
+<apex:page standardController="Contact" extensions="UAT_EmbeddedVFTableController" sidebar="False" showHeader="False">
+<apex:form >
+
+<apex:pageBlock >
+<apex:pageblockTable value="{!con}" var="a"  id="pbd">  
+     <apex:column title="Last Name" headervalue="Last Name">  
+       <apex:outputField value="{!a.lastname}"/> 
+     </apex:column>  
+     
+     <apex:column title="Delete button" headerValue="Delete button">
+         <apex:commandButton value="Delete" onclick="return confirm('Are you sure?')" action="{!delcontact}"  reRender="pbd">
+            <apex:param assignTo="{!delcon}" value="{!a.id}" name="paramname"/>
+         </apex:commandButton>
+     </apex:column>
+     
+     <apex:column title="Delete link" headerValue="Delete link">
+         
+         <apex:commandLink value="Delete" onclick="return confirm('Are you sure?')" action="{!delcontact}" reRender="pbd">
+             <apex:param assignTo="{!delcon}" value="{!a.id}" name="paramname"/>
+         </apex:commandlink>
+         
+     </apex:column>
+     
+     <apex:column title="Email" headervalue="Email">  
+       <apex:outputField value="{!a.email}"/> 
+     </apex:column>
+      
+     <apex:column title="Mobile" headervalue="Mobile">  
+       <apex:outputField value="{!a.mobilephone}"/> 
+     </apex:column>
+           
+    </apex:pageBlockTable> 
+    </apex:pageBlock>
+   </apex:form> 
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardController="Record_Type__c">
+  <script language="javascript">
+      // alert('Sorry You Cannot Create Order Here');
+       window.location.assign("/001/o");
+  </script>
+  
+</apex:page>

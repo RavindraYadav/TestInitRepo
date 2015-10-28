@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="4">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbConnect" name="DbConnect" testItemId="5" title="DB Connect: SFDC_TESTConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">GGN_ORCL1</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="autoCommit">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="ifAlreadyOpen">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="commitBehaviour">
+          <value class="value" valueClass="string">CommitIfSuccessful</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbUpdate" name="DbUpdate" parameterGeneratorUri="command:com.provar.eclipse.ui.handlers.connection.DbUpdateTestStepCommand" testItemId="3" title="DB Update: SFDC_TESTConnection.ACCOUNT">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="where__ACCOUNT_NAME">
+          <value class="value" valueClass="string">ACC101</value>
+        </argument>
+        <argument id="PHONE">
+          <value class="value" valueClass="string">000000012</value>
+        </argument>
+      </arguments>
+      <expectedExceptions/>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbUpdateTestStepCommand.ConnectionName">SFDC_TEST</propertyValue>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbUpdateTestStepCommand.TableName">ACCOUNT</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="wherecolumns" name="where__ACCOUNT_NAME" title="ACCOUNT_NAME">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="updatecolumns" name="PHONE" title="PHONE">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <tags/>
+</testCase>

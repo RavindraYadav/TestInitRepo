@@ -1,0 +1,29 @@
+<apex:page standardController="Contact" extensions="UAT_EmbeddedVFTableController" sidebar="False" showHeader="False">
+<apex:form >
+<apex:pageBlock >
+<apex:pageblockTable value="{!con}" var="a" >  
+     
+     <apex:column title="Last Name" headervalue="Outer Column 1">  
+       <apex:outputField value="{!a.lastname}"/> 
+    
+    
+    <apex:pageblockTable value="{!con}" var="m" >       
+       
+       <apex:column headerValue="Inner column 1">
+           <apex:outputField value="{!m.lastname}"/>
+       </apex:column>
+       
+       <apex:column headerValue="Inner column 2">
+           <apex:outputField value="{!m.email}"/>
+       </apex:column>
+    
+    </apex:pageBlockTable>
+    
+    
+     </apex:column>  
+     
+           
+    </apex:pageBlockTable> 
+    </apex:pageBlock>
+   </apex:form> 
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page standardController="Account">
+    <apex:sectionHeader title="{!$ObjectType.Account.LabelPlural}" subtitle="Home" />
+    <apex:listViews id="lv" type="Account">
+    </apex:listViews>
+</apex:page>

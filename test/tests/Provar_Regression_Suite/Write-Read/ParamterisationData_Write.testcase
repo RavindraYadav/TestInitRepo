@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="86">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="14" title="Write: {ExcelData}=&gt;excel:templates/WriteWorkBook.xlsx?worksheet=Sheet2&amp;sheetMode=overwrite">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="ExcelData"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="urlTarget" uri="excel:templates/WriteWorkBook.xlsx?worksheet=Sheet2&amp;sheetMode=overwrite"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">excel:templates/WriteWorkBook.xlsx?worksheet=Sheet2&amp;sheetMode=overwrite</value>
+        </argument>
+      </arguments>
+      <generatedParameters/>
+    </apiCall>
+  </steps>
+  <parameterValueSources>
+    <parameterValueSource url="excel:templates/ProvarWriteData.xlsx?worksheet=Sheet1&amp;range=A1%3AD3&amp;namesLocation=FirstColumnOfRange&amp;whereComparison=EqualTo" variableName="ExcelData" variableScope="Test">
+      <cacheToken>C:/Users/Admin/Desktop/Provar_WorkSpace/Provar_Regression/test/templates/ProvarWriteData.xlsx;1431945262656</cacheToken>
+      <cachedParameters>
+        <apiParam name="ColumnNumber"/>
+        <apiParam name="F"/>
+        <apiParam name="M"/>
+        <apiParam name="L"/>
+      </cachedParameters>
+    </parameterValueSource>
+  </parameterValueSources>
+</testCase>

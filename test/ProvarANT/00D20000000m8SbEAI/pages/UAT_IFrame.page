@@ -1,0 +1,5 @@
+<apex:page sidebar="False" showHeader="False" standardController="Account">
+ 
+ <apex:iframe src="/apex/UAT_EmbeddedVF"/>
+ 
+</apex:page>

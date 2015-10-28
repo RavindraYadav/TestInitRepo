@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase>
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: Number1">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Number1</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">20</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: Number2">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Number2</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">14</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="4" title="Assert: {Number1}{Number2} EqualTo 2014">
+      <arguments>
+        <argument id="expectedValue">
+          <value class="compound">
+            <parts>
+              <variable>
+                <path element="Number1"/>
+              </variable>
+              <variable>
+                <path element="Number2"/>
+              </variable>
+            </parts>
+          </value>
+        </argument>
+        <argument id="actualValue">
+          <value class="value" valueClass="string">2014</value>
+        </argument>
+        <argument id="comparisonType">
+          <value class="value" valueClass="string">EqualTo</value>
+        </argument>
+        <argument id="caseSensitive">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="retainDecimals">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="nullGreater">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="matchMultiLine">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="matchDotAll">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="failureMessage"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="3" title="Assert: {Number1}{Number2} NotEqualTo 2014">
+      <arguments>
+        <argument id="expectedValue">
+          <value class="compound">
+            <parts>
+              <variable>
+                <path element="Number1"/>
+              </variable>
+              <variable>
+                <path element="Number2"/>
+              </variable>
+            </parts>
+          </value>
+        </argument>
+        <argument id="actualValue">
+          <value class="value" valueClass="string">2014</value>
+        </argument>
+        <argument id="comparisonType">
+          <value class="value" valueClass="string">NotEqualTo</value>
+        </argument>
+        <argument id="caseSensitive">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="retainDecimals">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="nullGreater">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="matchMultiLine">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="matchDotAll">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="failureMessage"/>
+      </arguments>
+      <expectedExceptions>
+        <expectedException comparisonType="Contains" title="Message">
+          <assertionValue class="value" valueClass="string">Assertion failed. </assertionValue>
+        </expectedException>
+      </expectedExceptions>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: number">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">number</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable" topLevel="true">
+                  <path element="UpdatedDate"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
+</testCase>

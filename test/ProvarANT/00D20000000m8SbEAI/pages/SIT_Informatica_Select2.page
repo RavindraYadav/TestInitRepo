@@ -1,0 +1,36 @@
+<apex:page controller="SIT_Informatica_Select2">
+    <apex:stylesheet value="{!URLFOR($Resource.informatica_communities,'customStyles.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.informatica_communities,'css/select2.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.informatica_communities,'css/font-awesome.min.css')}"/>
+
+    <apex:includeScript value="{!URLFOR($Resource.informatica_communities,'js/html5shiv.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.informatica_communities,'js/jquery-1.9.1.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.informatica_communities,'js/select2.min.js')}"/>
+
+    <script type="text/javascript" src="{!URLFOR($Resource.informatica_communities,'js/communityCustomStyle.js')}"></script>
+    
+    <script type='text/javascript'>
+    $(document).ready(function() {
+          $("[id$=ctprojectSelection2]").select2({
+               width : '35%',
+               placeHolder : 'Please type to filter projects'
+           });    
+        });
+    </script>
+    
+    
+    <div id="content">
+        <apex:form >
+            <b> Select your First Project : </b>
+            <apex:selectList value="{!SelectedProject}" multiselect="false" size="1" id="ctprojectSelection">
+                <apex:selectOptions value="{!Projects}"/>
+                <!--apex:actionSupport event="onchange" action="{!redirect}"/-->
+            </apex:selectList>
+            <b> Select your Second Project : </b>
+            <apex:selectList value="{!SelectedProject}" multiselect="false" size="1" id="ctprojectSelection2">
+                <apex:selectOptions value="{!Projects}"/>
+                <!--apex:actionSupport event="onchange" action="{!redirect}"/-->
+            </apex:selectList>
+        </apex:form> <br/>
+    </div>
+</apex:page>

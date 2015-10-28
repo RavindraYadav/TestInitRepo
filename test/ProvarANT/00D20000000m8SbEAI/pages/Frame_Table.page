@@ -1,0 +1,12 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+  
+  <apex:pageblock >
+  <apex:pageblocksection >
+  <apex:iframe src="/apex/VF_HtmlTable"/>
+  </apex:pageblocksection>
+  </apex:pageblock>
+</apex:page>

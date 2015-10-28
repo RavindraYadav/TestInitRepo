@@ -1,0 +1,34 @@
+<apex:page standardController="Case" showHeader="false" sidebar="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                 <apex:inputField value="{!case.Currency__c}"/>
+                 <apex:inputField value="{!case.TestDate__c}"/>
+                 <apex:inputField value="{!case.TestFormula__c}"/>
+                 <apex:inputField value="{!case.TestMulti__c}"/>
+                 <apex:inputField value="{!case.TestNumber__c}"/>
+                 <apex:inputField value="{!case.TestPercent__c}"/>
+                 <apex:inputField value="{!case.TestURL__c}"/>
+                 <apex:inputField value="{!case.Asset}"/>
+                 <apex:inputField value="{!case.BusinessHours}"/>
+                 <apex:inputField value="{!case.Origin}"/>
+                 <apex:inputField value="{!case.Reason}"/>
+                 <apex:inputField value="{!case.Description}"/>
+                 <apex:inputField value="{!case.IsEscalated}"/>
+                 <apex:inputField value="{!case.Priority}"/>
+                 <apex:inputField value="{!case.Subject}"/>
+                 <apex:inputField value="{!case.Type}"/>
+                 <apex:inputField value="{!case.AccountId}"/>
+                 <apex:inputField value="{!case.ContactId}"/>
+                 <apex:inputField value="{!case.TestRichText__c}"/>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+    </apex:form>
+                    <apex:relatedList list="caseComments"/>
+
+</apex:page>

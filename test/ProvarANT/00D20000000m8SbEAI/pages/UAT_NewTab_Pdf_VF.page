@@ -1,0 +1,6 @@
+<apex:page >
+  
+  <apex:outputLink value="/servlet/servlet.FileDownload?file=015200000035Zcb" target="_blank">Click here for pdf in new tab</apex:outputLink>
+  
+  
+</apex:page>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testProject selectedBrowserConfigurationName="Full Screen" selectedWebBrowserType="IE">
+  <title>/test/.testproject</title>
+  <configPath>config</configPath>
+  <testsPath>tests</testsPath>
+  <templatesPath>templates</templatesPath>
+  <sourcePath>src</sourcePath>
+  <secureStoragePath>.secrets</secureStoragePath>
+  <browserDebugPort>0</browserDebugPort>
+  <connectionClasses>
+    <connectionClass name="sf">
+      <connections>
+        <connection name="Bank_RetailDepartment">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="8d426900-5706-4342-b2a2-733b0d3cdd1b" url="sf:user=admin1@test1.provar.com;password={password};environment=PROD_DEV;reports=true"/>
+          </connectionUrls>
+        </connection>
+        <connection name="MPOAT">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="18b9056d-8420-463c-b822-b32b580f5009" url="sf:user=vikas.wig@makepositive.com.oat;password={password};environment=SANDBOX"/>
+          </connectionUrls>
+        </connection>
+        <connection name="Devorg">
+          <summary>test</summary>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="4dca0f7a-4d34-41bb-befd-30bcb1ccd3a7" url="sf:user=sudarshan@sdmp.com;password={password};securityToken={securityToken};environment=PROD_DEV;userLoginUrl=https://login.salesforce.com/"/>
+          </connectionUrls>
+        </connection>
+        <connection name="testing">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=piyush.srivastav@test.provar.com;logonAsConnection=Bank_RetailDepartment"/>
+          </connectionUrls>
+        </connection>
+        <connection name="testing1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="ad18dd56-a6bd-4633-a6ba-5d1c1af5bd99" url="sf:user=regression1@testing.com;password={password};securityToken={securityToken};environment=PROD_DEV"/>
+          </connectionUrls>
+        </connection>
+        <connection name="testing2">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="744e7320-17bb-4f39-b7a0-a404b7de1760" url="sf:user=regression2@testing.com;password={password};securityToken={securityToken};environment=PROD_DEV"/>
+          </connectionUrls>
+        </connection>
+        <connection name="testing3">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="5cecf382-a899-4e01-b983-e443a1dde5cf" url="sf:user=regression3@testing.com;password={password};securityToken={securityToken};environment=PROD_DEV"/>
+          </connectionUrls>
+        </connection>
+        <connection name="testing1_logon1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=test@regressionuser.com;logonAsConnection=testing1"/>
+          </connectionUrls>
+        </connection>
+        <connection name="testing1_logon2">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=test1@regressionuser.com;logonAsConnection=testing1"/>
+          </connectionUrls>
+        </connection>
+        <connection name="SIT_Logon1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=test2@regressionuser.com;logonAsConnection=Bank_RetailDepartment"/>
+          </connectionUrls>
+        </connection>
+        <connection name="SIT_Logon2">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=test3@regressionuser.com;logonAsConnection=Bank_RetailDepartment"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection name="ProvarRegression1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="aef14cc9-3530-4b9b-91f7-d3ebc4bdc88e" url="google:user=provarregressionpack1@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1443163766000;proxyHost="/>
+          </connectionUrls>
+        </connection>
+        <connection name="ProvarRegression2">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="d21ca702-4ceb-44d2-a8e6-7b9c6aaf64f6" url="google:user=provarregressionpack2@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1443163992000;proxyHost="/>
+          </connectionUrls>
+        </connection>
+        <connection name="ProvarRegression3">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="2d562332-8bb9-4b99-92d3-0d9f60c7b7ef" url="google:user=provarregressionpack3@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1443164012000;proxyHost="/>
+          </connectionUrls>
+        </connection>
+        <connection name="ProvarRegression4">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="5489df18-e63e-41e8-b30d-fbdfabd94077" url="google:user=provarregressionpack4@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1443164025000;proxyHost="/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="ui">
+      <connections>
+        <connection name="FaceBook">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://www.facebook.com"/>
+          </connectionUrls>
+        </connection>
+        <connection name="Amazon">
+          <summary>\t\t</summary>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://www.amazon.in/"/>
+          </connectionUrls>
+        </connection>
+        <connection name="Yahoo">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://in.yahoo.com/?p=us"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="database">
+      <connections>
+        <connection name="GGN_ORCL1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="b07b2374-d2ac-47ff-a59d-ed0782dcd488" url="jdbc:oracle:thin:GGN_ORCL1/{password}@163.47.141.75:1521:xe"/>
+          </connectionUrls>
+        </connection>
+        <connection name="GGN_MSQL1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="c7d4d3c0-85bc-479a-9d93-6e8740d609b5" url="jdbc:mysql://163.47.141.75:3306/test?schemaName=test&amp;user=GGN_MSQL1&amp;password={password}"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+  </connectionClasses>
+  <browserConfigurations>
+    <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
+      <summary>Full screen with Test Authoring adjustment</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1024" browserWidthType="Pixels" name="1024x768">
+      <summary>Fixed 1024x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="800" browserHeightType="Pixels" browserWidth="1280" browserWidthType="Pixels" name="1280x800">
+      <summary>Fixed 1280x800</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1366" browserWidthType="Pixels" name="1366x768">
+      <summary>Fixed 1366x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="1080" browserHeightType="Pixels" browserWidth="1920" browserWidthType="Pixels" name="1920x1080">
+      <summary>Fixed 1920x1080</summary>
+    </browserConfiguration>
+    <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="500" browserHeightType="Pixels" browserWidth="3000" browserWidthType="Pixels" name="Test">
+      <summary/>
+    </browserConfiguration>
+  </browserConfigurations>
+</testProject>

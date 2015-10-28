@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="6">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbConnect" name="DbConnect" testItemId="1" title="DB Connect: DbConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">GGN_ORCL1</value>
+        </argument>
+        <argument id="autoCommit">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="ifAlreadyOpen">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="commitBehaviour">
+          <value class="value" valueClass="string">CommitIfSuccessful</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+      <parameterValueSources/>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbInsert" name="DbInsert" testItemId="2" title="DB Insert: DbConnection.ACCOUNT=&gt;DbResults">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DbResults</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource url="db:sqlquery?connection=SFDC_TEST&amp;query=INSERT+INTO+ACCOUNT+%28ACCOUNT_NAME%2CBILLING_CITY%2CPHONE%29%0AVALUES%28%27ACCnew12%27%2C%27GAOnewNN%27%2C%27123456600%27%29&amp;rowLimit=100" variableName="ExcelData" variableScope="Test">
+          <cachedParameters/>
+        </parameterValueSource>
+      </parameterValueSources>
+    </apiCall>
+  </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
+</testCase>

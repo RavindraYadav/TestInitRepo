@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="66">
+  <summary>undefined</summary>
+  <remarks>undefined</remarks>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="8" title="Set Values: FirstName_LastName">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">FirstName_LastName</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="compound">
+                  <parts>
+                    <variable>
+                      <path element="ExcelData"/>
+                      <path element="FirstName"/>
+                    </variable>
+                    <variable>
+                      <path element="ExcelData"/>
+                      <path element="LastName"/>
+                    </variable>
+                  </parts>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <parameterValueSources>
+    <parameterValueSource url="excel:templates/NameData.xlsx?worksheet=Sheet1&amp;range=A1%3AC4&amp;namesLocation=FirstRowOfRange&amp;whereComparison=EqualTo" variableName="ExcelData" variableScope="Test">
+      <cacheToken>C:/Users/admin/Desktop/NameData.xlsx;1418712622988</cacheToken>
+      <cachedParameters>
+        <apiParam name="FirstName"/>
+        <apiParam name="MiddleName"/>
+        <apiParam name="LastName"/>
+      </cachedParameters>
+    </parameterValueSource>
+  </parameterValueSources>
+  <tags>
+    <string>disabled</string>
+  </tags>
+</testCase>

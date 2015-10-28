@@ -1,0 +1,33 @@
+<apex:page sidebar="false" showHeader="false" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+  <apex:pageBlock >
+   <apex:pageBlockSection >
+  
+  <table title='Test' border='1px'>
+  <tbody>
+  <tr>
+  <th>Name</th>
+  <th>Phone</th>
+  </tr>
+  <tr>
+  <td>Piyush</td>
+  <td>11111</td>
+  </tr>
+  <tr>
+  <td>Mohit</td>
+  <td>22222</td>
+  </tr>
+  <tr>
+  <td>Harpreet</td>
+  <td>333333</td>
+  </tr>
+  </tbody>
+  </table>
+  
+    </apex:pageBlockSection> 
+
+  </apex:pageBlock>
+</apex:page>

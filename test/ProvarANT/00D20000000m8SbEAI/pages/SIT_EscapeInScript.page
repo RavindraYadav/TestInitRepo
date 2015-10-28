@@ -1,0 +1,20 @@
+<apex:page >
+    <script type="text/javascript">
+        
+            s.apl=new Function("l","v","d","u",""
+            +"var s=this,m=0;if(!l)l='';if(u){var i,n,a=s.split(l,d);for(i=0;i<" + "a."
+            +"length;i++){n=a[i];m=m||(u==1?(n==v):(n.toLowerCase()==v.toLowerCas"
+            +"e()));}}if(!m)l=l?l+d+v:v;return l");
+    </script>
+
+    <div id="content">
+        <apex:form >
+            <b> Select your Project : </b>
+            <apex:selectList multiselect="false" size="1" id="ctprojectSelection">
+                <apex:selectOption itemLabel="Test1" itemValue="Test1"></apex:selectOption>
+                <apex:selectOption itemLabel="Test2" itemValue="Test2"></apex:selectOption>
+                <apex:selectOption itemLabel="Test3" itemValue="Test3"></apex:selectOption>
+            </apex:selectList>
+        </apex:form> <br/>
+    </div>
+</apex:page>

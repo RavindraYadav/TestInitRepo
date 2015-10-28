@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="5">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbConnect" name="DbConnect" testItemId="4" title="DB Connect: DbConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">GGN_ORCL1</value>
+        </argument>
+        <argument id="autoCommit">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="ifAlreadyOpen">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="commitBehaviour">
+          <value class="value" valueClass="string">CommitIfSuccessful</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbDelete" name="DbDelete" testItemId="2" title="DB Delete: DbConnection.ACCOUNT">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+      </arguments>
+      <expectedExceptions/>
+      <parameterValueSources/>
+    </apiCall>
+  </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
+</testCase>

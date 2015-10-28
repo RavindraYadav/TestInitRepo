@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbConnect" name="DbConnect" testItemId="4" title="DB Connect: SFDC_TESTConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">GGN_ORCL1</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="autoCommit">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="ifAlreadyOpen">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="commitBehaviour">
+          <value class="value" valueClass="string">CommitIfSuccessful</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbInsert" name="DbInsert" parameterGeneratorUri="command:com.provar.eclipse.ui.handlers.connection.DbInsertTestStepCommand" testItemId="9" title="DB Insert: SFDC_TESTConnection.ACCOUNT=&gt;GGN_ORCL1InsertedId">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">GGN_ORCL1InsertedId</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="NAME">
+          <value class="value" valueClass="string">Provar01</value>
+        </argument>
+        <argument id="BILLING_CITY">
+          <value class="value" valueClass="string">London1</value>
+        </argument>
+        <argument id="PHONE">
+          <value class="value" valueClass="string">4449944494</value>
+        </argument>
+        <argument id="PIN">
+          <value class="value" valueClass="string">234560</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbInsertTestStepCommand.ConnectionName">GGN_ORCL1</propertyValue>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbInsertTestStepCommand.TableName">ACCOUNT</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="resultcolumns" name="NAME" title="NAME">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="resultcolumns" name="BILLING_CITY" title="BILLING_CITY">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="resultcolumns" name="PHONE" title="PHONE">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="resultcolumns" name="PIN" title="PIN">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbRead" name="DbRead" parameterGeneratorUri="command:com.provar.eclipse.ui.handlers.connection.DbReadTestStepCommand" testItemId="10" title="DB Read: SFDC_TESTConnection.ACCOUNT=&gt;GGN_ORCL1Read">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">GGN_ORCL1Read</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="where__NAME">
+          <value class="value" valueClass="string">test01</value>
+        </argument>
+      </arguments>
+      <resultAssertions>
+        <resultAssertion resultName="NAME" title="Check NAME">
+          <expected class="value" valueClass="string">test01</expected>
+        </resultAssertion>
+      </resultAssertions>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbReadTestStepCommand.ConnectionName">GGN_ORCL1</propertyValue>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbReadTestStepCommand.TableName">ACCOUNT</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="wherecolumns" name="where__NAME" title="NAME">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="resultcolumns" name="NAME" title="NAME">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbUpdate" name="DbUpdate" parameterGeneratorUri="command:com.provar.eclipse.ui.handlers.connection.DbUpdateTestStepCommand" testItemId="11" title="DB Update: SFDC_TESTConnection.ACCOUNT">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="where__NAME">
+          <value class="value" valueClass="string">test02</value>
+        </argument>
+        <argument id="BILLING_CITY">
+          <value class="value" valueClass="string">TestCity</value>
+        </argument>
+        <argument id="PHONE">
+          <value class="value" valueClass="string">334344</value>
+        </argument>
+        <argument id="PIN">
+          <value class="value" valueClass="string">34345</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbUpdateTestStepCommand.ConnectionName">GGN_ORCL1</propertyValue>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbUpdateTestStepCommand.TableName">ACCOUNT</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="wherecolumns" name="where__NAME" title="NAME">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="updatecolumns" name="BILLING_CITY" title="BILLING_CITY">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="updatecolumns" name="PHONE" title="PHONE">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="updatecolumns" name="PIN" title="PIN">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbDelete" name="DbDelete" parameterGeneratorUri="command:com.provar.eclipse.ui.handlers.connection.DbDeleteTestStepCommand" testItemId="12" title="DB Delete: SFDC_TESTConnection.ACCOUNT">
+      <tags/>
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">SFDC_TESTConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">ACCOUNT</value>
+        </argument>
+        <argument id="where__NAME">
+          <value class="value" valueClass="string">Acc03</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbDeleteTestStepCommand.ConnectionName">GGN_ORCL1</propertyValue>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbDeleteTestStepCommand.TableName">ACCOUNT</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="wherecolumns" name="where__NAME" title="NAME">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

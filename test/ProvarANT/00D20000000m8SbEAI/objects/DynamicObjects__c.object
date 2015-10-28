@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checkbox description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please check or uncheck it</inlineHelpText>
+        <label>Checkbox Label</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <description>Currency Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Currency Amount</inlineHelpText>
+        <label>Currency Label</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date_Time__c</fullName>
+        <description>Date and Time Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Date and Time</inlineHelpText>
+        <label>Date Time Label</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <description>Date Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Date</inlineHelpText>
+        <label>Date Label</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Email Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Email</inlineHelpText>
+        <label>Email Label</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <description>Geolocation Description</description>
+        <displayLocationInDecimal>false</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Geolocation</inlineHelpText>
+        <label>Geolocation Label</label>
+        <required>true</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Number__c</fullName>
+        <description>Number Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Number</inlineHelpText>
+        <label>Number Label</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent__c</fullName>
+        <description>Percent Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Percent</inlineHelpText>
+        <label>Percent Label</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <description>Phone Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Phone Number</inlineHelpText>
+        <label>Phone Label</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PickList_MultiSelect__c</fullName>
+        <description>Multi Value Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Multi Value</inlineHelpText>
+        <label>PickList MultiSelect Label</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value 5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PickList__c</fullName>
+        <description>PickList Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter PickList</inlineHelpText>
+        <label>PickList label</label>
+        <picklist>
+            <picklistValues>
+                <fullName>test 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>test 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>test 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>test 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>test 5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TextArea_Long__c</fullName>
+        <description>TextArea_Long Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter TextArea_Long</inlineHelpText>
+        <label>TextArea_Long Label</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TextArea_Rich__c</fullName>
+        <description>TextArea_Rich Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter TextArea_Rich</inlineHelpText>
+        <label>TextArea_Rich Label</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TextArea__c</fullName>
+        <description>TextArea Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter TextArea</inlineHelpText>
+        <label>TextArea Label</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Text_Encrypted__c</fullName>
+        <description>Text_Encrypted Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Text_Encrypted</inlineHelpText>
+        <label>Text_Encrypted Label</label>
+        <length>50</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>all</maskType>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Text__c</fullName>
+        <description>Text Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Text</inlineHelpText>
+        <label>Text Label</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>URL__c</fullName>
+        <description>URL Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter URL</inlineHelpText>
+        <label>URL Label</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>DynamicObjects</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Date_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>A-{0000}</displayFormat>
+        <label>DynamicObjects Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DynamicObjects</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Date_is_a_week_later</fullName>
+        <active>true</active>
+        <errorConditionFormula>Date__c - TODAY() &lt; 7</errorConditionFormula>
+        <errorDisplayField>Date__c</errorDisplayField>
+        <errorMessage>Date should be ahead by 7 days atleast</errorMessage>
+    </validationRules>
+</CustomObject>

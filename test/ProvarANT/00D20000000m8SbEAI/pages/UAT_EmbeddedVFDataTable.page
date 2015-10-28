@@ -1,0 +1,20 @@
+<apex:page standardController="Contact" extensions="UAT_EmbeddedVFTableController" sidebar="False" showHeader="False">
+<apex:form >
+<apex:pageBlock >
+<apex:dataTable value="{!con}" var="a" >  
+     <apex:column title="Last Name" headervalue="Last Name">  
+       <apex:outputField value="{!a.lastname}"/> 
+     </apex:column>  
+     
+     <apex:column title="Email" headervalue="Email">  
+       <apex:outputField value="{!a.email}"/> 
+     </apex:column>
+      
+     <apex:column title="Mobile" headervalue="Mobile">  
+       <apex:outputField value="{!a.mobilephone}"/> 
+     </apex:column>
+           
+    </apex:dataTable> 
+    </apex:pageBlock>
+   </apex:form> 
+</apex:page>

@@ -1,0 +1,131 @@
+<apex:page controller="SIT_Apex_Repeat_1">
+
+<apex:form >
+
+     <apex:pageBlock title="List of Strings">
+        <ul id="li-repeat-html" data-role="listview" data-inset="true" data-filter="true">
+            <apex:repeat value="{!someListOfStrings}" var="item">
+                <li>{!item}</li>
+            </apex:repeat>
+        </ul>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Flat apex:outputText no ids">
+        <apex:repeat value="{!someListOfStrings}" var="item">
+           <br/><apex:outputText value="{!item}"/>
+        </apex:repeat>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Flat apex:outputText with ids">
+        <apex:repeat value="{!someListOfStrings}" var="item">
+           <br/><apex:outputText id="flatOutputText" value="{!item}"/>
+        </apex:repeat>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Flat apex:inputCheckboxes no ids and text labels">
+        <apex:repeat value="{!someListOfStrings}" var="item">
+           <br/><apex:inputCheckbox />{!item}
+        </apex:repeat>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Flat apex:inputCheckboxes with ids and html labels">
+        <apex:repeat value="{!someListOfStrings}" var="item">
+           <br/><apex:inputCheckbox id="flatInputCheckbox"/><apex:outputLabel for="flatInputCheckbox">{!item}</apex:outputLabel>
+        </apex:repeat>
+    </apex:pageBlock>
+        
+    <apex:pageBlock title="Flat apex:inputCheckboxes with ids and text labels">
+        <apex:repeat value="{!someListOfStrings}" var="item">
+           <br/><apex:inputCheckbox id="flatInputCheckbox"/>{!item}
+        </apex:repeat>
+    </apex:pageBlock>
+        
+    <apex:pageBlock title="Flat apex:selectedRadio">
+        <apex:selectRadio value="{!SelectedString}">
+               <apex:selectOptions value="{!selectOptions}"/>
+        </apex:selectRadio>
+    </apex:pageBlock>
+        
+    <apex:pageBlock title="Single-parented table">
+        <table class="productTable" cellpadding="2" cellspacing="5">
+            <thead>
+                <tr>
+                    <th>Product Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!products}" var="product">
+                    <tr>
+                        <td>
+                            <apex:inputField value="{!product.ProductCode}" />
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Nested Joined table">
+        <table class="productTable" cellpadding="2" cellspacing="5">
+            <apex:repeat value="{!products}" var="product">
+                <tr>
+                    <th><apex:outputField value="{!product.Name}"/></th>
+                    <th>Product Code</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <apex:inputField value="{!product.ProductCode}" >
+                        </apex:inputField>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                   <apex:repeat value="{!$ObjectType.Product2.FieldSets.SIT_Apex_Repeat_1}" var="f">
+                       <th>{!f.label}</th>
+                    </apex:repeat>     
+                </tr>
+                <tr>
+                    <td></td>
+                   <apex:repeat value="{!$ObjectType.Product2.FieldSets.SIT_Apex_Repeat_1}" var="f">
+                        <td>
+                           <apex:inputField id="FieldSetInputField" value="{!product[f]}"/>
+                        </td>
+                    </apex:repeat>     
+                </tr>
+
+            </apex:repeat>
+        </table>
+    </apex:pageBlock>
+        
+    <apex:pageBlock title="FieldSet repeat">
+        <apex:pageBlockSection columns="2">
+           <apex:repeat value="{!$ObjectType.Product2.FieldSets.SIT_Apex_Repeat_1}" var="f">
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="{!f.Label}" for="FieldSetInputField"/>
+                   <apex:inputField id="FieldSetInputField" value="{!product[f]}"/>
+                </apex:pageBlockSectionItem>
+            </apex:repeat>     
+        </apex:pageBlockSection>               
+    </apex:pageBlock>
+
+    <apex:pageBlock title="PageBlockSection repeat with nested dataTable">
+           <apex:repeat value="{!productCategoryMap}" var="productCategory">
+                <apex:pageBlockSection title="{!productCategory}">
+
+                        <apex:dataTable value="{!productCategoryMap[productCategory]}" width="700px" var="product" rowClasses="odd,even" styleClass="tableClass"  style="margin-bottom:.75em">
+
+                            <apex:column width="100px">
+                                <apex:inputField value="{!product.name}"/>
+                            </apex:column>
+
+                            <apex:column width="100px">
+                                <apex:inputField value="{!product.ProductCode}"/>
+                            </apex:column>
+                        </apex:dataTable>
+                </apex:pageBlockSection>               
+           </apex:repeat>
+    </apex:pageBlock>
+
+</apex:form>
+</apex:page>

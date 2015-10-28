@@ -1,0 +1,17 @@
+<apex:page standardStylesheets="false" sidebar="false" showChat="false" showHeader="false" action="{!redirect}">
+    
+    <div id="content">
+        <apex:form >
+            <b> Select your Project : </b>
+            <apex:selectList multiselect="false" size="1" id="ctprojectSelection">
+                <apex:selectOption itemLabel="Test1" itemValue="Test1"></apex:selectOption>
+                <apex:selectOption itemLabel="Test2" itemValue="Test2"></apex:selectOption>
+                <apex:selectOption itemLabel="Test3" itemValue="Test3"></apex:selectOption>
+            </apex:selectList>
+        </apex:form> <br/>
+        
+        <div id="main-container">
+            <apex:insert name="body"/>            
+        </div>
+    </div>
+</apex:page>
